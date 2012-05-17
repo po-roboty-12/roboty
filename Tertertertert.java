@@ -13,7 +13,7 @@ public class Tertertertert {
 		int x = poz.getX();
 		int y = poz.getY();
 		String str = wynik[x].substring(0, y * 2 - 1);
-		Kierunek k = a.getKierunek();
+		Punkt k = a.getKierunek();
 		if (k == Kierunek.Polnoc) {
 			str += "^A";
 		} else if (k == Kierunek.Poludnie) {

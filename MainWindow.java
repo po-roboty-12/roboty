@@ -102,7 +102,7 @@ public class MainWindow {
 		frame.getContentPane().add(canvas, BorderLayout.CENTER);
 	}
 	
-	private String[] getCokolwiek() {
+	private String[] getCokolwiek(Symulacja s) {
 		Robot a = s.getA();
 		Robot b = s.getB();
 		String pustaLinia = " _ _ _ _ _ _ _ _";

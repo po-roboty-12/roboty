@@ -8,11 +8,11 @@ public class Punkt {
 		this.y = y;
 	}
 	
-	int dajX() {
+	int getX() {
 		return x;
 	}
 	
-	int dajY() {
+	int getY() {
 		return y;
 	}
 
