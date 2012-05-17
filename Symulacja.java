@@ -1,14 +1,12 @@
-import java.util.PriorityQueue;
-
-
 public class Symulacja {
-	
-	private Robot a;
-	private Robot b;
+	private Robot a, b;
 	private PoleBitwy pole;
+	final private Punkt poleStartoweA = new Punkt(3, 1);
+	final private Punkt poleStartoweB = new Punkt(4, 2);
+	final private Kierunek kierunki = new Kierunek()
 	private PriorityQueue<Akcja> q = new PriorityQueue<Akcja>();
 	private boolean startB = false;
-	
+
 	private void przeprowadzTure(){
 		if (a.dajWytrzymalosc() * b.dajWytrzymalosc() != 0){
 			if (q.size == 0){
@@ -38,6 +36,17 @@ public class Symulacja {
 			}
 		}
 	}
-	
-	
+	public Robot getA() {
+		return a;
+	}
+
+	public Robot getB() {
+		return b;
+	}
+
+	public Symulacja(){
+		pole = new PoleBitwy();
+		a = new Robot(poleStartoweA, kierunki.Polnoc);
+		b = new Robot(poleStartoweB, kierunki.Poludnie);
+	}
 }
